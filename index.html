@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio Frontend</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            background: linear-gradient(to bottom, #222, #666, #a68); /* Simula el degradado del video */
+            color: #fff;
+        }
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #f0f0f0; /* Fondo claro para contraste */
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+        h1, h2 {
+            text-align: center;
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+        .tech-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .tech-item {
+            margin: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #fff;
+            color: #333;
+            width: 80px;
+            text-align: center;
+        }
+        .project {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .project-img {
+            width: 100px;
+            height: 100px;
+            margin-right: 10px;
+        }
+        .menu-icon {
+            display: none; /* Oculto por defecto */
+            font-size: 2em;
+            cursor: pointer;
+        }
+        @media (max-width: 600px) {
+            .container {
+                padding: 10px;
+            }
+            .menu-icon {
+                display: block;
+                position: absolute;
+                top: 10px;
+                right: 10px;
+            }
+            .nav {
+                display: none; /* Oculto por defecto en pantallas pequeñas */
+            }
+            .menu-open .nav {
+                display: block;
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                background-color: #f0f0f0;
+                padding: 20px;
+                z-index: 1000;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+        <nav class="nav">
+            <a href="#">Inicio</a>
+            <a href="#">Proyectos</a>
+            <a href="#">Sobre Mí</a>
+        </nav>
+        <h1>Portafolio Frontend</h1>
+        <h2>Hola, soy Adrian<br>Software Engineer</h2>
+        <p>Soy Ingeniero de Software y desarrollador frontend especializado en la creación de webs eficientes.</p>
+        <div class="section">
+            <h3>Tecnologías</h3>
+            <div class="tech-list">
+                <div class="tech-item">HTML</div>
+                <div class="tech-item">CSS</div>
+                <div class="tech-item">JavaScript</div>
+                <div class="tech-item">React</div>
+                <div class="tech-item">Astro</div>
+                <div class="tech-item">Tailwind</div>
+                <div class="tech-item">Git</div>
+                <div class="tech-item">Figma</div>
+            </div>
+        </div>
+        <div class="section">
+            <h3>Proyectos</h3>
+            <div class="project">
+                <img class="project-img" src="gymcoach.png" alt="GymCoach">
+                <h4>GymCoach</h4>
+                <p>Aplicación web que te permite gestionar tus rutinas de ejercicios y preguntar a un asistente virtual usando la API de OpenAI.</p>
+            </div>
+            <div class="project">
+                <img class="project-img" src="creepy.png" alt="Creepy Photos">
+                <h4>Creepy Photos</h4>
+                <p>Página web creada como participación en una Hackathon organizada por Cloudinary y Midudev por Halloween.</p>
+            </div>
+            <div class="project">
+                <img class="project-img" src="barramari.png" alt="Barra Marina">
